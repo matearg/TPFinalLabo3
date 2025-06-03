@@ -1,8 +1,8 @@
 {
-  "tienda": {
+  "libreria": {
     "nombre": "Librería Mar Abierto",
     "ubicacion": "Calle Guemes 3050, Mar del Plata",
-    "productos": [
+    "inventario": [
       {
         "tipo": "Libro",
         "nombre": "La Sombra del Viento",
@@ -269,6 +269,7 @@
         "marca": "Debate",
         "precio": 8.99,
         "cantidadDisponible": 9999,
+        "alquilado": false,
         "drm": true,
         "idioma": "Español",
         "especificaciones": [
@@ -297,6 +298,7 @@
         "marca": "Debate",
         "precio": 5.49,
         "cantidadDisponible": 9999,
+        "alquilado": false,
         "drm": false,
         "idioma": "Español",
         "especificaciones": [
@@ -325,6 +327,7 @@
         "marca": "Salamandra",
         "precio": 6.99,
         "cantidadDisponible": 9999,
+        "alquilado": false,
         "drm": true,
         "idioma": "Español",
         "especificaciones": [

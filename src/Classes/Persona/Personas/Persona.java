@@ -1,4 +1,4 @@
-package Classes.Persona;
+package Classes.Persona.Personas;
 
 public abstract class Persona {
     private String nombre;

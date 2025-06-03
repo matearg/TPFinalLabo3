@@ -1,10 +1,10 @@
-package Classes.Persona;
+package Classes.Persona.Personas;
 
-public class Empleado extends Persona {
+public class Administrador extends Persona {
     private double salario;
-    private boolean admin = false;
+    private boolean admin = true;
 
-    public Empleado() {
+    public Administrador() {
     }
 
     public double getSalario() {

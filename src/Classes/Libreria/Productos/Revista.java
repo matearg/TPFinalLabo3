@@ -1,7 +1,5 @@
 package Classes.Libreria.Productos;
 
-import Classes.Libreria.ProductoLibreria;
-
 public class Revista extends ProductoLibreria {
     private String frecuenciaDePublicacion;
     private String numeroDeEdicion;

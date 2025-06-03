@@ -1,7 +1,5 @@
-package Classes.Persona;
+package Classes.Persona.Personas;
 
-import Classes.Libreria.Libreria;
-import Classes.Libreria.ProductoLibreria;
 import Classes.Libreria.Productos.Ebook;
 
 import java.util.List;

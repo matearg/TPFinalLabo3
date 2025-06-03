@@ -1,5 +1,6 @@
 package Classes.Libreria;
 
+import Classes.Libreria.Productos.ProductoLibreria;
 import Exceptions.ElementoInexistenteException;
 import Exceptions.ProductoInvalidoException;
 

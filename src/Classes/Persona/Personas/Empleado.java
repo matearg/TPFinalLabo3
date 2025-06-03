@@ -1,17 +1,17 @@
-package Classes.Persona;
+package Classes.Persona.Personas;
 
-public class Administrador extends Persona {
-    private float salario;
-    private boolean admin = true;
+public class Empleado extends Persona {
+    private double salario;
+    private boolean admin = false;
 
-    public Administrador() {
+    public Empleado() {
     }
 
-    public float getSalario() {
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(float salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 

@@ -1,5 +1,6 @@
 package Classes.Persona;
 
+import Classes.Persona.Personas.Persona;
 import Exceptions.ElementoExistenteException;
 import Exceptions.ElementoInexistenteException;
 

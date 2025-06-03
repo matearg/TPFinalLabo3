@@ -1,9 +1,11 @@
 package Classes.Libreria;
 
+import Classes.Libreria.Productos.ProductoLibreria;
+
 public class GestionLibreria {
     private Libreria<ProductoLibreria> libreria;
 
-    public GestionLibreria(Libreria<ProductoLibreria> libreria) {
+    public GestionLibreria() {
         this.libreria = new Libreria<>();
     }
 

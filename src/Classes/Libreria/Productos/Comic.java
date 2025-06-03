@@ -1,7 +1,5 @@
 package Classes.Libreria.Productos;
 
-import Classes.Libreria.ProductoLibreria;
-
 public class Comic extends ProductoLibreria {
     private String universo;
     private String color;
