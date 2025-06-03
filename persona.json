@@ -1,0 +1,110 @@
+{
+  "personas": [
+    {
+      "tipoPersona": "Empleado",
+      "nombre": "Lucia Martinez",
+      "dni": "12345678",
+      "edad": 30,
+      "salario": 75000.0,
+      "admin": false
+    },
+    {
+      "tipoPersona": "Empleado",
+      "nombre": "Tomas Ruiz",
+      "dni": "22334455",
+      "edad": 27,
+      "salario": 68000.0,
+      "admin": false
+    },
+    {
+      "tipoPersona": "Administrador",
+      "nombre": "Carlos Gomez",
+      "dni": "87654321",
+      "edad": 45,
+      "salario": 95000.0,
+      "admin": true
+    },
+    {
+      "tipoPersona": "Administrador",
+      "nombre": "Maria Salinas",
+      "dni": "11223344",
+      "edad": 38,
+      "salario": 91000.0,
+      "admin": true
+    },
+    {
+      "tipoPersona": "Cliente",
+      "nombre": "Ana Torres",
+      "dni": "33445566",
+      "edad": 28,
+      "libros": [
+        {
+          "tipo": "Ebook",
+          "nombre": "Sapiens: De animales a dioses",
+          "marca": "Debate",
+          "precio": 8.99,
+          "cantidadDisponible": 9999,
+          "alquilado": true,
+          "drm": true,
+          "idioma": "Español",
+          "especificaciones": [
+            { "nombre": "Autor", "valor": "Yuval Noah Harari" },
+            { "nombre": "Formato", "valor": "EPUB" },
+            { "nombre": "Paginas", "valor": "512" },
+            { "nombre": "Tamanio", "valor": "4.5MB" }
+          ],
+          "embalajesDisponibles": []
+        },
+        {
+          "tipo": "Ebook",
+          "nombre": "1984",
+          "marca": "Debate",
+          "precio": 5.49,
+          "cantidadDisponible": 9999,
+          "alquilado": true,
+          "drm": false,
+          "idioma": "Español",
+          "especificaciones": [
+            { "nombre": "Autor", "valor": "George Orwell" },
+            { "nombre": "Formato", "valor": "PDF" },
+            { "nombre": "Paginas", "valor": "328" },
+            { "nombre": "Tamanio", "valor": "2.1MB" }
+          ],
+          "embalajesDisponibles": []
+        }
+      ]
+    },
+    {
+      "tipoPersona": "Cliente",
+      "nombre": "Javier Méndez",
+      "dni": "99887766",
+      "edad": 35,
+      "libros": [
+        {
+          "tipo": "Ebook",
+          "nombre": "Harry Potter y la piedra filosofal",
+          "marca": "Salamandra",
+          "precio": 6.99,
+          "cantidadDisponible": 9999,
+          "alquilado": true,
+          "drm": true,
+          "idioma": "Español",
+          "especificaciones": [
+            { "nombre": "Autor", "valor": "J.K. Rowling" },
+            { "nombre": "Formato", "valor": "MOBI" },
+            { "nombre": "Paginas", "valor": "256" },
+            { "nombre": "Tamanio", "valor": "3.8MB" }
+          ],
+          "embalajesDisponibles": []
+        }
+      ]
+    },
+    {
+      "tipoPersona": "Cliente",
+      "nombre": "Paula Rivero",
+      "dni": "55667788",
+      "edad": 22,
+      "libros": []
+    }
+  ]
+}

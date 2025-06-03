@@ -1,6 +1,6 @@
-package Classes.Productos;
+package Classes.Libreria.Productos;
 
-import Classes.ProductoLibreria;
+import Classes.Libreria.ProductoLibreria;
 import Interfaces.I_Alquiler;
 
 public class Ebook extends ProductoLibreria implements I_Alquiler {

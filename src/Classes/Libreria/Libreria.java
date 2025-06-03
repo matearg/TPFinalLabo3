@@ -1,6 +1,6 @@
-package Classes;
+package Classes.Libreria;
 
-import Exceptions.LibroInexistenteException;
+import Exceptions.ElementoInexistenteException;
 import Exceptions.ProductoInvalidoException;
 
 import java.util.List;
@@ -60,7 +60,7 @@ public class Libreria<T extends ProductoLibreria> {
         if(index != -1) {
             inventario.remove(index);
         } else {
-            throw new LibroInexistenteException("El libro no se ha encontrado.");
+            throw new ElementoInexistenteException("El libro no se ha encontrado.");
         }
     }
 

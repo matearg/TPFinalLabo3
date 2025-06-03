@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Libreria;
 
 public class GestionLibreria {
     private Libreria<ProductoLibreria> libreria;

@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Libreria.Productos;
 
 public class Especificacion {
     private String nombre;

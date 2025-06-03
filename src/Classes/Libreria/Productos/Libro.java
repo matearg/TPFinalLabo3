@@ -1,6 +1,6 @@
-package Classes.Productos;
+package Classes.Libreria.Productos;
 
-import Classes.ProductoLibreria;
+import Classes.Libreria.ProductoLibreria;
 
 public class Libro extends ProductoLibreria {
     private String genero;

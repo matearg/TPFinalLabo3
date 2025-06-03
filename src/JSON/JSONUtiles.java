@@ -10,9 +10,9 @@ import org.json.JSONTokener;
 
 public class JSONUtiles {
 
-    public static void grabar(JSONObject object) {
+    public static void grabar(JSONObject object, String archivo) {
         try {
-            FileWriter file = new FileWriter("tienda.json");
+            FileWriter file = new FileWriter(archivo);
             file.write(object.toString());
             file.flush();
             file.close();

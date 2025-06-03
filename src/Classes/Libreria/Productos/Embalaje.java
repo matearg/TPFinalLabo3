@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Libreria.Productos;
 
 public class Embalaje {
     private String tipo;

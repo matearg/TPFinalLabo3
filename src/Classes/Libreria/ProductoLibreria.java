@@ -1,4 +1,7 @@
-package Classes;
+package Classes.Libreria;
+
+import Classes.Libreria.Productos.Embalaje;
+import Classes.Libreria.Productos.Especificacion;
 
 import java.util.List;
 import java.util.Objects;
