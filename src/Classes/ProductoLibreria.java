@@ -1,0 +1,103 @@
+package Classes;
+
+import java.util.List;
+import java.util.Objects;
+
+public abstract class ProductoLibreria {
+    private String tipo;
+    private String nombre;
+    private String marca;
+    private double precio;
+    private int cantidad;
+    private List<Especificacion> especificaciones;
+    private List<Embalaje> embalajes;
+
+    public ProductoLibreria() {
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public List<Especificacion> getEspecificaciones() {
+        return especificaciones;
+    }
+
+    public void setEspecificaciones(List<Especificacion> especificaciones) {
+        this.especificaciones = especificaciones;
+    }
+
+    public List<Embalaje> getEmbalajes() {
+        return embalajes;
+    }
+
+    public void setEmbalajes(List<Embalaje> embalajes) {
+        this.embalajes = embalajes;
+    }
+
+    public void ver() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Marca: " + marca);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Cantidad: " + cantidad);
+        System.out.println("Detalle:");
+        verDetalle();
+        for(Especificacion e: especificaciones) {
+            e.ver();
+        }
+        for(Embalaje e: embalajes) {
+            e.ver();
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductoLibreria that = (ProductoLibreria) o;
+        return Objects.equals(nombre, that.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nombre) * 32;
+    }
+
+    public abstract void verDetalle();
+}

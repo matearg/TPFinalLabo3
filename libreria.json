@@ -1,0 +1,352 @@
+{
+  "tienda": {
+    "nombre": "Librería Mar Abierto",
+    "ubicacion": "Calle Guemes 3050, Mar del Plata",
+    "productos": [
+      {
+        "tipo": "Libro",
+        "nombre": "La Sombra del Viento",
+        "marca": "Planeta",
+        "precio": 24.99,
+        "cantidadDisponible": 200,
+        "generoLiterario": "Misterio y Drama",
+        "anioPublicacion": 2001,
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Carlos Ruiz Zafon"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "576"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Envuelto en plastico",
+            "resistencia": "Media",
+            "dimensiones": "20x13x3cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Revista",
+        "nombre": "National Geographic - Mayo 2025",
+        "marca": "National Geographic",
+        "precio": 7.99,
+        "cantidadDisponible": 120,
+        "frecuenciaPublicacion": "Mensual",
+        "numeroEdicion": "Vol. 2025-05",
+        "especificaciones": [
+          {
+            "nombre": "Categoria",
+            "valor": "Ciencia y Naturaleza"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "120"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Plastico retractilado",
+            "resistencia": "Baja",
+            "dimensiones": "28x21x0.5cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Comic",
+        "nombre": "Spider-Man: Into the Spider-Verse",
+        "marca": "Marvel",
+        "precio": 14.50,
+        "cantidadDisponible": 300,
+        "universo": "Marvel",
+        "color": "Color",
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Brian Michael Bendis"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "64"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Funda plastica",
+            "resistencia": "Media",
+            "dimensiones": "26x17x0.4cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Libro",
+        "nombre": "Cien Anios de Soledad",
+        "marca": "Sudamericana",
+        "precio": 19.99,
+        "cantidadDisponible": 150,
+        "generoLiterario": "Novela",
+        "anioPublicacion": 1967,
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Gabriel Garcia Marquez"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "432"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Caja de carton",
+            "resistencia": "Alta",
+            "dimensiones": "21x14x4cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Revista",
+        "nombre": "Rolling Stone - Junio 2025",
+        "marca": "Rolling Stone",
+        "precio": 5.50,
+        "cantidadDisponible": 100,
+        "frecuenciaPublicacion": "Anual",
+        "numeroEdicion": "Vol. 2025",
+        "especificaciones": [
+          {
+            "nombre": "Categoria",
+            "valor": "Musica y Cultura"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "98"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Plastico retractilado",
+            "resistencia": "Baja",
+            "dimensiones": "28x21x0.4cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Comic",
+        "nombre": "Batman: Anio Uno",
+        "marca": "DC Comics",
+        "precio": 12.99,
+        "cantidadDisponible": 180,
+        "universo": "DC",
+        "color": "Blanco y Negro",
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Frank Miller"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "96"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Funda plastica",
+            "resistencia": "Media",
+            "dimensiones": "26x17x0.6cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Libro",
+        "nombre": "El Nombre del Viento",
+        "marca": "Debolsillo",
+        "precio": 22.95,
+        "cantidadDisponible": 130,
+        "generoLiterario": "Novela",
+        "anioPublicacion": 2007,
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Patrick Rothfuss"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "872"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Envuelto en plastico",
+            "resistencia": "Media",
+            "dimensiones": "23x15x5cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Revista",
+        "nombre": "Muy Interesante - Abril 2025",
+        "marca": "G+J",
+        "precio": 6.25,
+        "cantidadDisponible": 90,
+        "frecuenciaPublicacion": "Mensual",
+        "numeroEdicion": "Vol. 2025-04",
+        "especificaciones": [
+          {
+            "nombre": "Categoria",
+            "valor": "Tecnologia y Ciencia"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "110"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Plastico retractilado",
+            "resistencia": "Baja",
+            "dimensiones": "28x21x0.5cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Comic",
+        "nombre": "Mafalda Edición Integral",
+        "marca": "Lumen",
+        "precio": 49.90,
+        "cantidadDisponible": 75,
+        "universo": "Mafalda",
+        "color": "Color",
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Quino"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "600"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Caja de carton",
+            "resistencia": "Alta",
+            "dimensiones": "30x22x6cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Libro",
+        "nombre": "1984",
+        "marca": "Debate",
+        "precio": 17.49,
+        "cantidadDisponible": 160,
+        "generoLiterario": "Ciencia Ficcion",
+        "anioPublicacion": 1949,
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "George Orwell"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "328"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Envuelto en plastico",
+            "resistencia": "Media",
+            "dimensiones": "20x13x2.5cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Ebook",
+        "nombre": "Sapiens: De animales a dioses",
+        "marca": "Debate",
+        "precio": 8.99,
+        "cantidadDisponible": 9999,
+        "drm": true,
+        "idioma": "Español",
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "Yuval Noah Harari"
+          },
+          {
+            "nombre": "Formato",
+            "valor": "EPUB"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "512"
+          },
+          {
+            "nombre": "Tamanio",
+            "valor": "4.5MB"
+          }
+        ],
+        "embalajesDisponibles": []
+      },
+      {
+        "tipo": "Ebook",
+        "nombre": "1984",
+        "marca": "Debate",
+        "precio": 5.49,
+        "cantidadDisponible": 9999,
+        "drm": false,
+        "idioma": "Español",
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "George Orwell"
+          },
+          {
+            "nombre": "Formato",
+            "valor": "PDF"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "328"
+          },
+          {
+            "nombre": "Tamanio",
+            "valor": "2.1MB"
+          }
+        ],
+        "embalajesDisponibles": []
+      },
+      {
+        "tipo": "Ebook",
+        "nombre": "Harry Potter y la piedra filosofal",
+        "marca": "Salamandra",
+        "precio": 6.99,
+        "cantidadDisponible": 9999,
+        "drm": true,
+        "idioma": "Español",
+        "especificaciones": [
+          {
+            "nombre": "Autor",
+            "valor": "J.K. Rowling"
+          },
+          {
+            "nombre": "Formato",
+            "valor": "MOBI"
+          },
+          {
+            "nombre": "Paginas",
+            "valor": "256"
+          },
+          {
+            "nombre": "Tamanio",
+            "valor": "3.8MB"
+          }
+        ],
+        "embalajesDisponibles": []
+      }
+    ]
+  }
+}
