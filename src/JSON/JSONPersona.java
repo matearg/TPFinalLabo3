@@ -16,7 +16,7 @@ import java.util.List;
 public class JSONPersona {
     public static GestionPersona<Persona> mapeoPersonas(String archivo) {
         GestionPersona<Persona> p = new GestionPersona<>();
-        List<Persona> personas = new ArrayList<>();
+        List<Persona> personas;
 
         try {
             JSONObject json = new JSONObject(JSONUtiles.leer(archivo));
