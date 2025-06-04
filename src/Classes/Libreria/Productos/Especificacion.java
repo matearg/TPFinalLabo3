@@ -1,5 +1,6 @@
 package Classes.Libreria.Productos;
 
+// Especificaciones de los productos
 public class Especificacion {
     private String nombre;
     private String valor;

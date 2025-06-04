@@ -2,6 +2,7 @@ package Classes.Libreria;
 
 import Classes.Libreria.Productos.ProductoLibreria;
 
+// Clase gestora de libreria
 public class GestionLibreria {
     private Libreria<ProductoLibreria> libreria;
 

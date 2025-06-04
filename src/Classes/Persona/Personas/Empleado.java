@@ -1,10 +1,13 @@
 package Classes.Persona.Personas;
 
+// Subclase de Persona tiene la capacidad de visualizar productos, clientes y empleados
+// pero sin poder modificar sus atributos
 public class Empleado extends Persona {
     private double salario;
     private boolean admin = false;
 
     public Empleado() {
+        this.setTipo("Empleado");
     }
 
     public double getSalario() {

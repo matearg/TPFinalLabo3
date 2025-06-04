@@ -7,6 +7,7 @@ import Exceptions.ElementoInexistenteException;
 import java.util.ArrayList;
 import java.util.List;
 
+// Clase gestora de Persona
 public class GestionPersona<T extends Persona> {
     private List<T> personas = new ArrayList<>();
 
@@ -21,6 +22,9 @@ public class GestionPersona<T extends Persona> {
         this.personas = personas;
     }
 
+    // Busca un elemento dentro de la lista generica
+    // devuelve su indice, en caso de no encontrarlo
+    // devuelve -1
     public int buscar(T t) {
         for (int i = 0; i < personas.size(); i++) {
             if (t.getDni().equals(personas.get(i).getDni())) {
@@ -30,6 +34,9 @@ public class GestionPersona<T extends Persona> {
         return -1;
     }
 
+    // Utiliza el metodo buscar para verificar que la persona
+    // no este cargada, en ese caso, la agrega a la lista caso contrario
+    // lanza una excepcion personalizada (ElementoExistenteException)
     public void agregar(T t) {
         int index = buscar(t);
         if (index == -1) {
@@ -39,6 +46,9 @@ public class GestionPersona<T extends Persona> {
         }
     }
 
+    // Utliza el metodo buscar para conocer el indice de la persona buscada
+    // si la encuentra la elimina de la lista, caso contrario lanza una
+    // excepcion personalizada (ElementoInexistenteException)
     public void eliminar(T t) {
         int index = buscar(t);
         if (index != -1) {

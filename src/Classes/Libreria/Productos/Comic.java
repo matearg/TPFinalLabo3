@@ -1,10 +1,13 @@
 package Classes.Libreria.Productos;
 
+
+// Subclase de ProductoLibreria
 public class Comic extends ProductoLibreria {
     private String universo;
     private String color;
 
     public Comic() {
+        this.setTipo("Comic");
     }
 
     public String getUniverso() {

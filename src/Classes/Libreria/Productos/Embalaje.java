@@ -1,5 +1,6 @@
 package Classes.Libreria.Productos;
 
+// Subclase de ProductoLibreria
 public class Embalaje {
     private String tipo;
     private String resistencia;

@@ -10,7 +10,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+// Manejo de archivos JSON de librerias y productos
 public class JSONLibreria {
+    // Lectura de libreria
     public static GestionLibreria mapeoLibreria(String archivo) {
         GestionLibreria l = new GestionLibreria();
         Libreria<ProductoLibreria> libreria = new Libreria<>();
@@ -29,6 +31,7 @@ public class JSONLibreria {
         return l;
     }
 
+    // Lectura de inventario de productos
     public static List<ProductoLibreria> mapeoInventario(JSONArray jInventario) {
         List<ProductoLibreria> libreria = new ArrayList<>();
 
@@ -66,6 +69,7 @@ public class JSONLibreria {
         return libreria;
     }
 
+    // Lectura de productoLibreria
     public static void mapeoProducto(JSONObject jProducto, ProductoLibreria producto) {
         try {
             producto.setNombre(jProducto.getString("nombre"));
@@ -119,5 +123,91 @@ public class JSONLibreria {
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    // Escritura libreria
+    public static void escrituraLibreria(GestionLibreria libreria, String archivo) {
+        JSONObject jLibreria = new JSONObject();
+        JSONObject l = new JSONObject();
+        try {
+            jLibreria.put("nombre", libreria.getLibreria().getNombre());
+            jLibreria.put("ubicacoin", libreria.getLibreria().getUbicacion());
+            JSONArray jInventario = escrituraInventario(libreria.getLibreria().getInventario());
+            jLibreria.put("inventario", jInventario);
+            l.put("libreria", jLibreria);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+        JSONUtiles.grabar(l, archivo);
+    }
+
+    // Escitura de inventario de productos
+    public static JSONArray escrituraInventario(List<ProductoLibreria> inventario) {
+        JSONArray jInventario = new JSONArray();
+
+        for (ProductoLibreria p : inventario) {
+            JSONObject jProducto = escrituraProducto(p);
+            jInventario.put(jProducto);
+        }
+
+        return jInventario;
+    }
+
+    // Escritura de productoLibreria
+    public static JSONObject escrituraProducto(ProductoLibreria producto) {
+        JSONObject o = new JSONObject();
+
+        try {
+            o.put("tipo", producto.getTipo());
+            o.put("nombre", producto.getNombre());
+            o.put("marca", producto.getMarca());
+            o.put("precio", producto.getPrecio());
+            o.put("cantidadDisponible", producto.getCantidad());
+
+            JSONArray jEspecificaciones = new JSONArray();
+            for (Especificacion e : producto.getEspecificaciones()) {
+                JSONObject jEspecificacion = new JSONObject();
+                jEspecificacion.put("nombre", e.getNombre());
+                jEspecificacion.put("valor", e.getValor());
+                jEspecificaciones.put(jEspecificacion);
+            }
+            o.put("especificaciones", jEspecificaciones);
+
+            JSONArray jEmbalajes = new JSONArray();
+            for (Embalaje e : producto.getEmbalajes()) {
+                JSONObject jEmbalaje = new JSONObject();
+                jEmbalaje.put("tipo", e.getTipo());
+                jEmbalaje.put("resistencia", e.getResistencia());
+                jEmbalaje.put("dimensiones", e.getDimensiones());
+                jEmbalajes.put(jEmbalaje);
+            }
+            o.put("embalajesDisponibles", jEmbalajes);
+
+            if (producto instanceof Libro) {
+                o.put("generoLiterario", ((Libro) producto).getGenero());
+                o.put("anioPublicacion", ((Libro) producto).getAnioPublicacion());
+            }
+
+            if (producto instanceof Revista) {
+                o.put("frecuenciaPublicacion", ((Revista) producto).getFrecuenciaDePublicacion());
+                o.put("numeroEdicion", ((Revista) producto).getNumeroDeEdicion());
+            }
+
+            if (producto instanceof Comic) {
+                o.put("universo", ((Comic) producto).getUniverso());
+                o.put("color", ((Comic) producto).getColor());
+            }
+
+            if (producto instanceof Ebook) {
+                o.put("alquilado", ((Ebook) producto).isAlquilado());
+                o.put("drm", ((Ebook) producto).isDrm());
+                o.put("idioma", ((Ebook) producto).getIdioma());
+            }
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+        return o;
     }
 }

@@ -3,6 +3,7 @@ package Classes.Libreria.Productos;
 import java.util.List;
 import java.util.Objects;
 
+// Clase padre abstracta productoLibreria
 public abstract class ProductoLibreria {
     private String tipo;
     private String nombre;
@@ -71,6 +72,7 @@ public abstract class ProductoLibreria {
         this.embalajes = embalajes;
     }
 
+    // Metodo de visualizacion de los productoLibreria
     public void ver() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Marca: " + marca);
@@ -87,6 +89,7 @@ public abstract class ProductoLibreria {
         }
     }
 
+    // Metodos equals y hashcode personalizados
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -99,5 +102,7 @@ public abstract class ProductoLibreria {
         return Objects.hashCode(nombre) * 32;
     }
 
+    // Metodo abstracto que implemetaran todas las subclases
+    // muestra las caracteristicas de cada subclase
     public abstract void verDetalle();
 }

@@ -1,10 +1,12 @@
 package Classes.Libreria.Productos;
 
+// Subclase de ProductoLibreria
 public class Libro extends ProductoLibreria {
     private String genero;
     private int anioPublicacion;
 
     public Libro() {
+        this.setTipo("Libro");
     }
 
     public String getGenero() {
