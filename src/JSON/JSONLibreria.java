@@ -92,7 +92,7 @@ public class JSONLibreria {
             }
 
             if (producto instanceof Ebook) {
-                ((Ebook) producto).setAlquilado(jProducto.getBoolean("alqiulado"));
+                ((Ebook) producto).setAlquilado(jProducto.getBoolean("alquilado"));
                 ((Ebook) producto).setDrm(jProducto.getBoolean("drm"));
                 ((Ebook) producto).setIdioma(jProducto.getString("idioma"));
             }
@@ -131,7 +131,7 @@ public class JSONLibreria {
         JSONObject l = new JSONObject();
         try {
             jLibreria.put("nombre", libreria.getLibreria().getNombre());
-            jLibreria.put("ubicacoin", libreria.getLibreria().getUbicacion());
+            jLibreria.put("ubicacion", libreria.getLibreria().getUbicacion());
             JSONArray jInventario = escrituraInventario(libreria.getLibreria().getInventario());
             jLibreria.put("inventario", jInventario);
             l.put("libreria", jLibreria);

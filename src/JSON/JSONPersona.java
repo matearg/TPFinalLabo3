@@ -1,7 +1,6 @@
 package JSON;
 
 import Classes.Libreria.Productos.Ebook;
-import Classes.Libreria.Productos.ProductoLibreria;
 import Classes.Persona.GestionPersona;
 import Classes.Persona.Personas.Administrador;
 import Classes.Persona.Personas.Cliente;
@@ -71,6 +70,7 @@ public class JSONPersona {
             persona.setNombre(jPersona.getString("nombre"));
             persona.setDni(jPersona.getString("dni"));
             persona.setEdad(jPersona.getInt("edad"));
+            persona.setPinAcceso(jPersona.getString("pinAcceso"));
 
             if (persona instanceof Empleado) {
                 ((Empleado) persona).setSalario(jPersona.getDouble("salario"));
