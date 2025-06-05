@@ -2,7 +2,6 @@ package Classes.Libreria;
 
 import Classes.Libreria.Productos.ProductoLibreria;
 import Exceptions.ElementoInexistenteException;
-import Exceptions.ProductoInvalidoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
 public class Libreria<T extends ProductoLibreria> {
     private String nombre;
     private String ubicacion;
-    private List<T> inventario;
+    private List<T> inventario = new ArrayList<>();
 
     public Libreria() {
     }
@@ -58,12 +57,7 @@ public class Libreria<T extends ProductoLibreria> {
     // lo agrega a la lista caso contrario
     // lanza una excepcion personalizada (ProductoInvalidoException)
     public void agregar(T t) {
-        int index = buscar(t);
-        if (index == -1 && t.getPrecio() > 0) {
-            inventario.add(t);
-        } else {
-            throw new ProductoInvalidoException("El precio debe ser mayo a cero.");
-        }
+        inventario.add(t);
     }
 
     // Utliza el metodo buscar para conocer el indice del producto buscado

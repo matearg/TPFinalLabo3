@@ -9,6 +9,12 @@ public class Embalaje {
     public Embalaje() {
     }
 
+    public Embalaje(String tipo, String resistencia, String dimensiones) {
+        this.tipo = tipo;
+        this.resistencia = resistencia;
+        this.dimensiones = dimensiones;
+    }
+
     public String getTipo() {
         return tipo;
     }

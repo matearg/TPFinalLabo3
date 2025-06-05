@@ -3,7 +3,6 @@ package Classes.Persona;
 import Classes.Persona.Personas.Administrador;
 import Classes.Persona.Personas.Empleado;
 import Classes.Persona.Personas.Persona;
-import Exceptions.ElementoExistenteException;
 import Exceptions.ElementoInexistenteException;
 
 import java.util.ArrayList;
@@ -50,12 +49,7 @@ public class GestionPersona<T extends Persona> extends Persona {
     // no este cargada, en ese caso, la agrega a la lista caso contrario
     // lanza una excepcion personalizada (ElementoExistenteException)
     public void agregar(T t) {
-        int index = buscar(t);
-        if (index == -1) {
-            personas.add(t);
-        } else {
-            throw new ElementoExistenteException("El dni de la persona ya se encuntra registrado.");
-        }
+        personas.add(t);
     }
 
     // Utliza el metodo buscar para conocer el indice de la persona buscada

@@ -8,6 +8,11 @@ public class Especificacion {
     public Especificacion() {
     }
 
+    public Especificacion(String nombre, String valor) {
+        this.nombre = nombre;
+        this.valor = valor;
+    }
+
     public String getNombre() {
         return nombre;
     }
