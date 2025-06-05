@@ -44,8 +44,8 @@ public class Libreria<T extends ProductoLibreria> {
     // devuelve su indice, en caso de no encontrarlo
     // devuelve -1
     public int buscar(T t) {
-        for(int i = 0; i < inventario.size(); i++) {
-            if(t.equals(inventario.get(i))) {
+        for (int i = 0; i < inventario.size(); i++) {
+            if (t.equals(inventario.get(i))) {
                 return i;
             }
         }
@@ -58,7 +58,7 @@ public class Libreria<T extends ProductoLibreria> {
     // lanza una excepcion personalizada (ProductoInvalidoException)
     public void agregar(T t) {
         int index = buscar(t);
-        if(index == -1 && t.getPrecio() > 0) {
+        if (index == -1 && t.getPrecio() > 0) {
             inventario.add(t);
         } else {
             throw new ProductoInvalidoException("El precio debe ser mayo a cero.");
@@ -70,7 +70,7 @@ public class Libreria<T extends ProductoLibreria> {
     // excepcion personalizada (ElementoInexistenteException)
     public void eliminar(T t) {
         int index = buscar(t);
-        if(index != -1) {
+        if (index != -1) {
             inventario.remove(index);
         } else {
             throw new ElementoInexistenteException("El libro no se ha encontrado.");
@@ -78,9 +78,10 @@ public class Libreria<T extends ProductoLibreria> {
     }
 
     public void ver() {
+        System.out.println(" --------------------------------------  ");
         System.out.println("Nombre: " + nombre);
         System.out.println("Ubicacion: " + ubicacion);
-        for (ProductoLibreria p: inventario) {
+        for (ProductoLibreria p : inventario) {
             p.ver();
         }
     }

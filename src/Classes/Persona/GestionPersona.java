@@ -1,14 +1,17 @@
 package Classes.Persona;
 
+import Classes.Persona.Personas.Administrador;
+import Classes.Persona.Personas.Empleado;
 import Classes.Persona.Personas.Persona;
 import Exceptions.ElementoExistenteException;
 import Exceptions.ElementoInexistenteException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 // Clase gestora de Persona
-public class GestionPersona<T extends Persona> {
+public class GestionPersona<T extends Persona> extends Persona {
     private List<T> personas = new ArrayList<>();
 
     public GestionPersona() {
@@ -55,6 +58,53 @@ public class GestionPersona<T extends Persona> {
             personas.remove(index);
         } else {
             throw new ElementoInexistenteException("No se ha encontrado a la persona.");
+        }
+    }
+
+    public void ver() {
+        if (personas.isEmpty()) {
+            System.out.println("No hay personas registradas.");
+        } else {
+            for (T persona : personas) {
+                persona.ver();
+                System.out.println("-----");
+            }
+        }
+    }
+
+    public void eliminarPorDni(String dni) {
+        T personaEliminar = null;
+
+        for (T p : personas) {
+            if (p.getDni().equalsIgnoreCase(dni)) {
+                System.out.println(" dni encontrado a eliminar");
+                personaEliminar = p;
+            }
+        }
+        if (personaEliminar != null) {
+            eliminar(personaEliminar);
+        }
+
+    }
+
+    /// Cambia el sueldo segun el dni
+    public void cambiarSueldoPorDni(String dni) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println(" ingrese el salario ");
+        double salario = teclado.nextDouble();
+
+        for (T p : personas) {
+            if (p.getDni().equalsIgnoreCase(dni)) { /// chequear que sea empleado o Admin ya que solo esos cuentan con el atributo salario
+                if (p instanceof Empleado) {
+                    ((Empleado) p).setSalario(salario);
+                    System.out.println("salario actualizado ");
+                }
+                if (p instanceof Administrador) {
+                    ((Administrador) p).setSalario(salario);
+                    System.out.println("salario actualizado ");
+                }
+            }
         }
     }
 }

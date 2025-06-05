@@ -25,6 +25,7 @@ public class Especificacion {
     }
 
     public void ver() {
+
         System.out.println("Nombre: " + nombre);
         System.out.println("Valor: " + valor);
     }

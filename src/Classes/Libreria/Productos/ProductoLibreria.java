@@ -74,6 +74,7 @@ public abstract class ProductoLibreria {
 
     // Metodo de visualizacion de los productoLibreria
     public void ver() {
+        System.out.println(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
         System.out.println("Nombre: " + nombre);
         System.out.println("Marca: " + marca);
         System.out.println("Tipo: " + tipo);
@@ -81,10 +82,10 @@ public abstract class ProductoLibreria {
         System.out.println("Cantidad: " + cantidad);
         System.out.println("Detalle:");
         verDetalle();
-        for(Especificacion e: especificaciones) {
+        for (Especificacion e : especificaciones) {
             e.ver();
         }
-        for(Embalaje e: embalajes) {
+        for (Embalaje e : embalajes) {
             e.ver();
         }
     }

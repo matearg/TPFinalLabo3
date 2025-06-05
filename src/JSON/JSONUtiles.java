@@ -1,12 +1,12 @@
 package JSON;
 
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import org.json.JSONObject;
-import org.json.JSONTokener;
 
 public class JSONUtiles {
 

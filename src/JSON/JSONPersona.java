@@ -71,7 +71,7 @@ public class JSONPersona {
             persona.setDni(jPersona.getString("dni"));
             persona.setEdad(jPersona.getInt("edad"));
             persona.setPinAcceso(jPersona.getString("pinAcceso"));
-
+            persona.setPinAcceso(jPersona.getString("pinAcceso"));
             if (persona instanceof Empleado) {
                 ((Empleado) persona).setSalario(jPersona.getDouble("salario"));
                 ((Empleado) persona).setAdmin(jPersona.getBoolean("admin"));
@@ -163,4 +163,6 @@ public class JSONPersona {
 
         return p;
     }
+
+
 }
