@@ -12,7 +12,7 @@ import JSON.JSONPersona;
 import java.util.Scanner;
 
 public class Menu {
-    private static final GestionLibreria libreria = JSONLibreria.mapeoLibreria("libreria.json");
+    private final static GestionLibreria libreria = JSONLibreria.mapeoLibreria("libreria.json");
     private final static GestionPersona<Persona> personas = JSONPersona.mapeoPersonas("persona.json");
 
     public static void menu() {
@@ -23,6 +23,7 @@ public class Menu {
         do {
             System.out.println(" 1- Login");
             System.out.println(" 0- Salir");
+            System.out.print("Ingrese una opcion: ");
             opcion = scanner.nextInt();
             scanner.nextLine();
             switch (opcion) {
@@ -45,35 +46,36 @@ public class Menu {
     public static void login() {
         Scanner scanner = new Scanner(System.in);
         int intentos = 0;
-        while (intentos <= 5) {
-            intentos++;
+        int index;
+        do {
             System.out.print("Ingrese su Nombre: ");
             String nombre = scanner.nextLine();
-            System.out.print("Ingrese su pin de acceso: ");
-            String pin = scanner.nextLine();
-            System.out.println("Intentos: " + intentos + "/5");
 
-            for (Persona p : personas.getPersonas()) {
-                if (p.getNombre().equals(nombre)) {
-                    if (p.getPinAcceso().equals(pin)) {
-                        if (p instanceof Administrador) {
-                            menuAdmininstrador();
-                        }
-                        if (p instanceof Empleado) {
-                            menuEmpleado();
-                        }
-                        if (p instanceof Cliente) {
-                            menuCliente((Cliente) p);
-                        }
-                    } else {
-                        System.out.println("Pin incorrecto.");
-                    }
-                } else {
-                    System.out.println("Nombre no encontrado.");
-                }
+            index = personas.buscarNombre(nombre);
+        } while (index == -1);
+
+        Persona p = personas.getPersonas().get(index);
+        String pin;
+        do {
+            intentos++;
+            System.out.println("Intentos: " + intentos + "/5");
+            System.out.print("Ingrese su pin de acceso: ");
+            pin = scanner.nextLine();
+        } while (intentos <= 5 && !pin.equals(p.getPinAcceso()));
+
+        if (pin.equals(p.getPinAcceso())) {
+            if (p instanceof Administrador) {
+                menuAdmininstrador();
+            }
+            if (p instanceof Empleado) {
+                menuEmpleado();
+            }
+            if (p instanceof Cliente) {
+                menuCliente((Cliente) p);
             }
         }
     }
+
 
     public static void menuAdmininstrador() {
         Scanner scanner = new Scanner(System.in);

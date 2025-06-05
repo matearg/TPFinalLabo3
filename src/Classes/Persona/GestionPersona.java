@@ -37,6 +37,15 @@ public class GestionPersona<T extends Persona> extends Persona {
         return -1;
     }
 
+    public int buscarNombre(String nombre) {
+        for (int i = 0; i < personas.size(); i++) {
+            if (nombre.equals(personas.get(i).getNombre())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     // Utiliza el metodo buscar para verificar que la persona
     // no este cargada, en ese caso, la agrega a la lista caso contrario
     // lanza una excepcion personalizada (ElementoExistenteException)

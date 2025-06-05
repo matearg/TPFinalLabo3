@@ -4,6 +4,7 @@ import Classes.Libreria.Productos.ProductoLibreria;
 import Exceptions.ElementoInexistenteException;
 import Exceptions.ProductoInvalidoException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // Clase generica con metodos para
@@ -81,7 +82,7 @@ public class Libreria<T extends ProductoLibreria> {
         System.out.println(" --------------------------------------  ");
         System.out.println("Nombre: " + nombre);
         System.out.println("Ubicacion: " + ubicacion);
-        for (ProductoLibreria p : inventario) {
+        for (T p : inventario) {
             p.ver();
         }
     }

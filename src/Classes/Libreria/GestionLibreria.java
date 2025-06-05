@@ -21,6 +21,10 @@ public class GestionLibreria extends Libreria<ProductoLibreria> {
         this.libreria = libreria;
     }
 
+    public void ver() {
+        libreria.ver();
+    }
+
     public void cambiarEstadoAlquiler() { /// Cambia el estado del alquiler segun el nombre del articulo que se le envie
         Scanner teclado = new Scanner(System.in);
         System.out.println(" Ingrese el nombre del libro ");
@@ -37,10 +41,7 @@ public class GestionLibreria extends Libreria<ProductoLibreria> {
                     ebook.alqiular();
                     System.out.println("Ebook alquilado ");
                 }
-
             }
-
         }
     }
-
 }
